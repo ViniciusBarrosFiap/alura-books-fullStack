@@ -1,0 +1,19 @@
+{
+  "name": "alura-books-server",
+  "version": "1.0.0",
+  "description": "Server do alura Books",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViniciusBarrosFiap/alura-books-fullStack.git"
+  },
+  "author": "Vinicius Barros",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViniciusBarrosFiap/alura-books-fullStack/issues"
+  },
+  "homepage": "https://github.com/ViniciusBarrosFiap/alura-books-fullStack#readme"
+}
