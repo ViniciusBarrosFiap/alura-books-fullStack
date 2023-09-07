@@ -8,12 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ViniciusBarrosFiap/alura-books-fullStack.git"
+    "url": "git+https://github.com/ViniciusBarrosFiap/alura-books-fullStack/tree/main/alura-books-server"
   },
   "author": "Vinicius Barros",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ViniciusBarrosFiap/alura-books-fullStack/issues"
   },
-  "homepage": "https://github.com/ViniciusBarrosFiap/alura-books-fullStack#readme"
+  "homepage": "https://github.com/ViniciusBarrosFiap/alura-books-fullStack#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
+  }
 }
