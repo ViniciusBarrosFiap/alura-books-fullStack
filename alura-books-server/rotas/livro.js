@@ -1,18 +1,17 @@
 const {Router} = require("express");//Router: ferramenta do express para criar rotas
-const {getLivros} = require("../controladores/livro")
+const {getLivros, getLivro, postLivro, patchLivro, deleteLivro} = require("../controladores/livro");
 const router = Router();//variavel que cria uma instancia do Router
 //Responsavel pela leitura de dados
 router.get("/", getLivros)
+router.get("/:id", getLivro)
+
 //Responsavel por inserir dados
-router.post('/', (req, res)=>{
-    res.send("Você fez uma requisição do tipo post")
-})
+router.post('/', postLivro)
+
 //Responsavel por editar dados
-router.patch('/', (req, res)=>{
-    res.send("Você fez uma requisição do tipo patch")
-})
+router.patch('/:id', patchLivro)
+
 //Responsavel pela exclução de dados
-router.delete('/', (req, res)=>{
-    res.send("Você fez uma requisição do tipo delete")
-})
+router.delete('/:id', deleteLivro)
+
 module.exports = router;
