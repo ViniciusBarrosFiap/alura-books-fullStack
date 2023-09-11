@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const UlOpcoes = styled.ul`
@@ -16,13 +17,17 @@ const LiOpcoes = styled.li`
     cursor: pointer;
     text-align: center;
 `
-const textoOpcoes = ["CATEGORIAS", "FAVORITOS", "MINHA ESTANTE"]
+
+const textoOpcoes = ["CATEGORIAS", "FAVORITOS", "ESTANTE"]
 function OpcoesHeader(){
     return(
     <UlOpcoes>
         { textoOpcoes.map((texto)=> (
-        // eslint-disable-next-line react/jsx-key
-        <LiOpcoes className="opcao"><p>{texto}</p></LiOpcoes>
+            // eslint-disable-next-line react/jsx-key, react/jsx-no-comment-textnodes
+            <Link to={`/${texto.toLowerCase()}`}>
+                <LiOpcoes><p>{texto}</p></LiOpcoes>
+            </Link>
+        
         ) ) }
     </UlOpcoes>
     )

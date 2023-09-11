@@ -1,7 +1,8 @@
 import Input from "../../components/Input/index.jsx"
 import styled from 'styled-components'
-import { useState } from "react"
-import { livros } from './dadosPesquisa.jsx'
+import { useEffect, useState } from "react"
+import { getLivros } from "../../services/livros.jsx"
+
 const PesquisaContainer = styled.section`
     padding: 85px 0;
     color: #fff;
@@ -16,7 +17,14 @@ const Subtitulo = styled.h3`
 `
 
 function Pesquisa() {
-    const [livrosPesquisados, setLivrosPesquisados] = useState([])
+    const [livrosPesquisados, setLivrosPesquisados] = useState([]);
+    const [livros, setLivros] = useState([]);
+
+    useEffect(() => {
+        const livrosDaAPI = getLivros() 
+        setLivros(livrosDaAPI)}, 
+        [])
+
     console.log(livrosPesquisados)
 
     return (

@@ -2,6 +2,7 @@ import IconesHeader from '../Icones/index.jsx'
 import Logo from '../Logo/index.jsx'
 import OpcoesHeader from '../OpcoesHeader/index.jsx'
 import styled from 'styled-components'
+import {Link} from 'react-router-dom'
 
 const AppHeader = styled.header`
     background-color: #fff;
@@ -15,7 +16,10 @@ const AppHeader = styled.header`
 function Header() {
     return(
         <AppHeader>
-            <Logo/>
+            <Link to="/">
+                <Logo/>
+            </Link>
+            
             <OpcoesHeader/>
             <IconesHeader/>
         </AppHeader>
