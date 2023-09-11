@@ -70,8 +70,8 @@ function patchLivro(req, res){
 
 function deleteLivro(req, res){
     try{
+        const id = req.params.id
         if(id && Number(id)){
-            const id = req.params.id
             deleteLivro(id)
             res.send("Livro excluido com sucesso")
             
